@@ -1,0 +1,52 @@
+#
+# NOTE: Which is better TTF or OTF? OTF!
+# * https://www.makeuseof.com/tag/otf-vs-ttf-fonts-one-better/
+#
+
+[global]
+# RATE LIMITING
+#
+# You will hit rate limiting when using a lot of repositories and refreshing
+# often. 60 requests per hour per IP is the default for unauthenticated
+# requests.
+#
+# See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
+#
+#    github_token = "ghp_1234567890"
+
+#    quiet = false
+#    show_hash = false
+    upgrade_only = true
+#    target = "./test"
+
+# REPOSITORIES AND PROGRAMS
+#
+# Comments below are either the first line from --help, or my short summary.
+
+# Google Noto Emoji Font
+# License: Apache-2.0 license
+# Size: 200 MB (result is only 10 MB)
+["googlefonts/noto-emoji"]
+    #all = true
+    download_source = true
+    asset_filters = [ ".tar.gz" ]
+    file = "NotoColorEmoji.ttf"
+    target = "~/.local/share/fonts/NotoColorEmoji.ttf"
+
+# Ubuntu Sans Font
+# License: UBUNTU FONT LICENCE Version 1.0
+# Size: 30 MB
+["canonical/Ubuntu-Sans-fonts"]
+    all = true
+    asset_filters = [ "UbuntuSans-fonts-" ]
+    file = "*.otf"
+    target = "~/.local/share/fonts/"
+
+# Ubuntu Sans Mono Font
+# License: UBUNTU FONT LICENCE Version 1.0
+# Size: 10 MB
+["canonical/Ubuntu-Sans-Mono-fonts"]
+    all = true
+    asset_filters = [ "UbuntuSansMono-fonts-" ]
+    file = "*.otf"
+    target = "~/.local/share/fonts/"

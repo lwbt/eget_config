@@ -1,0 +1,110 @@
+[global]
+# RATE LIMITING
+#
+# You will hit rate limiting when using a lot of repositories and refreshing
+# often. 60 requests per hour per IP is the default for unauthenticated
+# requests.
+#
+# See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
+#
+#    github_token = "ghp_1234567890"
+
+#    quiet = false
+#    show_hash = false
+    upgrade_only = true
+#    target = "./test"
+
+# REPOSITORIES AND PROGRAMS
+#
+# Comments below are either the first line from --help, or my short summary.
+
+# Eget itself
+# License: MIT
+["zyedidia/eget"]
+    asset_filters = [ "static", ".tar.gz" ]
+    target = "~/.local/bin/eget"
+
+# Alternative to top with more functionality and graphs
+# License: Apache 2.0
+["aristocratos/btop"]
+    # TODO: Here is the problem again where I have to strip away the top folder.
+    #all = true
+    #file = "btop/*"
+    #target = "~/.local/bin/btop.d"
+    target = "~/.local/bin/btop"
+
+# Edit Asciinema recordings
+# License: MIT
+["cirocosta/asciinema-edit"]
+    asset_filters = [ "linux_amd64.tar.gz" ]
+    target = "~/.local/bin/asciinema-edit"
+
+# Tool to improve usability of shell scripts
+# License: MIT
+["charmbracelet/gum"]
+    #all = true
+    #file = "*"
+    asset_filters = [ ".tar.gz", "^.tar.gz.sbom" ]
+    #target = "~/.local/bin/gum.d"
+    target = "~/.local/bin/gum"
+
+# Pretty fast disk usage analyzer written in Go. Replacement for ncdu.
+# License: MIT
+["dundee/gdu"]
+    asset_filters = [ "static" ]
+    target = "~/.local/bin/gdu"
+
+# Analyze git repositories
+# License: MIT
+["github/git-sizer"]
+    target = "~/.local/bin/git-sizer"
+
+# Lightweight and flexible command-line JSON processor
+# License: MIT
+["jqlang/jq"]
+    asset_filters = [ "^linux64" ]
+    target = "~/.local/bin/jq"
+
+# A command-line fuzzy finder
+# License: MIT
+["junegunn/fzf"]
+    target = "~/.local/bin/fzf"
+
+# A static analysis tool for shell scripts
+# License: GPL 3.0
+["koalaman/shellcheck"]
+    target = "~/.local/bin/shellcheck"
+
+# Bug tracker embedded in git
+# License: GPL 3.0
+["MichaelMure/git-bug"]
+    target = "~/.local/bin/git-bug"
+
+# Open Source Continuous File Synchronization
+# License: MPL 2.0
+["syncthing/syncthing"]
+    target = "~/.local/bin/syncthing"
+
+# Share your terminal over the web
+# License: MIT
+["tsl0922/ttyd"]
+    asset_filters = [ "i686" ]
+    target = "~/.local/bin/ttyd"
+
+# Manage your dotfiles across multiple diverse machines, securely
+# License: MIT
+["twpayne/chezmoi"]
+    asset_filters = [ ".tar.gz", "^musl", "^glibc" ]
+    target = "~/.local/bin/chezmoi"
+
+# A structural diff that understands syntax
+# License: MIT
+["Wilfred/difftastic"]
+    asset_filters = [ "gnu.tar.gz" ]
+    target = "~/.local/bin/difft"
+
+# Git TUI
+# License: MIT
+["zellij-org/zellij"]
+    asset_filters = [ "musl.tar.gz" ]
+    target = "~/.local/bin/zellij"
