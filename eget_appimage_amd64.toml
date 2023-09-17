@@ -1,0 +1,39 @@
+[global]
+# RATE LIMITING
+#
+# You will hit rate limiting when using a lot of repositories and refreshing
+# often. 60 requests per hour per IP is the default for unauthenticated
+# requests.
+#
+# See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
+#
+#    github_token = "ghp_1234567890"
+
+#    quiet = false
+#    show_hash = false
+    upgrade_only = true
+#    target = "./test"
+
+# APPIMAGE
+#
+# Decide how you want to update, either with eget or with appimageupdatetool
+# after it has been installed.
+#
+# Comments below are either the first line from --help, or my short summary.
+
+# AppImage companion tool taking care of updates for the commandline.
+# License: MIT
+["AppImageCommunity/AppImageUpdate"]
+    asset_filters = [ "appimageupdatetool", "x86_64", "^.zsync" ]
+    target = "~/Applications/appimageupdatetool.AppImage"
+
+# A GPU-accelerated cross-platform terminal emulator and multiplexer
+# License: MIT + OFL 1.1
+#
+# Reasoning for not using Flatpak:
+# - Automatically updating flatpaks + long running terminal sessions [...]
+# - Flatpak is offered by the developer, but not a first class citizen.
+# - Issues with flatpak version on Steam Deck.
+["wez/wezterm"]
+    asset_filters = [ "AppImage", "^.zsync" ]
+    target = "~/Applications/wezterm.AppImage"

@@ -1,0 +1,28 @@
+[global]
+# RATE LIMITING
+#
+# You will hit rate limiting when using a lot of repositories and refreshing
+# often. 60 requests per hour per IP is the default for unauthenticated
+# requests.
+#
+# See: https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting
+#
+#    github_token = "ghp_1234567890"
+
+#    quiet = false
+#    show_hash = false
+    upgrade_only = true
+#    target = "./test"
+
+# NON-GITHUB (FOREIGN) BINARIES
+#
+# NOTE: Does not detect version and always downloads new files!
+#
+# Comments below are either the first line from --help, or my short summary.
+
+# FFmpeg
+# License: LGPL or GPL, https://ffmpeg.org/legal.html
+["https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"]
+    all = true
+    file = "*"
+    target = "~/.local/ffmpeg.d"

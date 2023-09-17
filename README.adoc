@@ -1,0 +1,97 @@
+= `EGET_CONFIG`
+:hide-uri-scheme:
+// Enable keyboard macros
+:experimental:
+:toc:
+:toclevels: 4
+:icons: font
+:note-caption: ℹ️
+:tip-caption: 💡
+:warning-caption: ⚠️
+:caution-caption: 🔥
+:important-caption: ❗
+
+Some configuration files and scripts for my needs of using eget.
+
+== TODO
+
+Rename config files from `*amd64` to `*linux_amd64`, or research how to best
+organize configs concering platforms (darwin, linux, win) and architectures
+(amd64, amd64).
+
+== Why?
+
+I tried to use `.chezmoiexternal.yaml` before, but I got lost in wanting to
+achieve the perfect setup. I try to decouple downloads from dotfile management
+here while still trying to manage a more complex setup in a flexible way.
+
+What is my motivation for using eget at all?
+
+There is always at least one application with fresh prebuilt binaries. Having
+them all defined in one or a few configuration files helps me to reduce
+maintenance burden.
+
+== Considerations
+
+=== Eget vs. AppImageUpdate
+
+Prefer Eget since applications like Wezterm include a timestamp in the file
+name which introduces additional maintenance effort.
+
+== How do I use this? Is it standard?
+
+It's not a standard for eget. You can use `eget_github_amd64.toml` and symlink
+or copy it to `~/.config/eget.toml` after checking its contents.
+
+You need to set `EGET_CONFIG=${HOME}/.config/eget.toml` explicitly if eget is
+unable to find the configuration file.
+
+The easiest way to use eget with an existing configuration file is
+`eget --download-all`.
+
+The other files deal with different kinds of downloads, AppImages which provide
+their own updater or binaries not hosted on GitHub.
+
+The shell scripts are a different way of using eget instead of even more
+complex scripts which could do the same.
+
+[source,bash]
+----
+# The pattern '^\["' relies on [global] being written without quotes and all
+# packages including quotes to keep logic simple.
+file="eget_github_amd64.toml"; \
+eget --rate; \
+echo "Number of packages: $(grep -c -e '^\["' "${file}")"; \
+export EGET_CONFIG="${file}"; \
+eget --download-all; \
+eget --rate
+----
+
+== Priorities -- Where does it fit in?
+
+Mostly from a Linux perspective:
+
+. Linux distribution repositories if version is recent enough
+. Flatpak / Flathub on Linux
+. eget | Homebrew on MacOS | Winget on Windows
+. pipx | go | rust | snap | AppImage
+. container images | Wine and Proton
+. VMs
+
+== Troubleshooting
+
+=== AppImages: error loading libfuse.so.2
+
+Error message:
+
+----
+dlopen(): error loading libfuse.so.2
+
+AppImages require FUSE to run.
+----
+
+On distributions like Ubuntu you can install the required package with:
+
+----
+sudo apt install libfuse2
+----
