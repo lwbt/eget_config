@@ -1,4 +1,4 @@
-# cspell:ignore github linux kube sbom dundee mozilla rclone
+# cspell:ignore github linux kube sbom dundee mozilla rclone atuin atuinsh ivaaaan
 [global]
 # RATE LIMITING
 #
@@ -27,12 +27,6 @@
     asset_filters = [ "static", ".tar.gz" ]
     #target = "~/.local/bin/eget"
 
-# GitHub’s official command line tool -- https://cli.github.com/
-# License: MIT
-["cli/cli"]
-    asset_filters = [ "linux", ".tar.gz" ]
-    file = "gh"
-
 # A vault for securely storing and accessing AWS credentials in development environments
 # License: MIT
 ["99designs/aws-vault"]
@@ -48,6 +42,7 @@
     #file = "kube*"
     file = "kubectx"
     #target = "~/.local/bin/"
+# TODO
 #["ahmetb/kubectx"]
 #    asset_filters = [ "kubens", "linux", ".tar.gz" ]
 #    file = "kubens"
@@ -60,6 +55,12 @@
     #file = "btop/*"
     #target = "~/.local/bin/btop.d"
     #target = "~/.local/bin/btop"
+
+# Magical shell history
+# License: MIT
+# Needs/Run with: eval "$(atuin init bash)"
+["atuinsh/atuin"]
+    asset_filters = [ "linux-gnu", ".tar.gz" ]
 
 # A fully-modern text-based browser, rendering to TTY and browsers
 # License: LGPL 2.1
@@ -82,6 +83,12 @@
 ["cirocosta/asciinema-edit"]
     asset_filters = [ "linux_amd64.tar.gz" ]
     #target = "~/.local/bin/asciinema-edit"
+
+# GitHub’s official command line tool -- https://cli.github.com/
+# License: MIT
+["cli/cli"]
+    asset_filters = [ "linux", ".tar.gz" ]
+    file = "gh"
 
 # CLI to view and manage your Kubernetes clusters
 # License: Apache 2.0
@@ -106,6 +113,11 @@
 # License: MIT
 ["github/git-sizer"]
     #target = "~/.local/bin/git-sizer"
+
+# Session manager and task runner for tmux. Start your development environment within one command.
+# License: MIT
+["ivaaaan/smug"]
+    asset_filters = [ "Linux", ".tar.gz" ]
 
 # A modern web UI for various torrent clients with a Node.js backend and React frontend.
 # License: GPL 3.0
@@ -168,6 +180,7 @@
 
 # Minimal, blazing-fast, and infinitely customizable prompt for any shell
 # License: ISC https://en.wikipedia.org/wiki/ISC_license
+# Needs/Run with: eval "$(starship init bash)"
 ["starship/starship"]
     asset_filters = [ "linux", ".tar.gz", "gnu", "^.sha256" ]
 
