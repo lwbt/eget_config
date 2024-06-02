@@ -96,11 +96,12 @@
     asset_filters = [ ".tar.gz", "^.sbom" ]
     #target = "~/.local/bin/k9s"
 
-# Define and run multi-container applications with Docker
-# License: Apache-2.0
-["docker/compose"]
-    asset_filters = [ "linux" ]
-    #target = "~/.local/bin/"
+# NOTE: Considered to be obsolete, included in distribution of docker itself
+## Define and run multi-container applications with Docker
+## License: Apache-2.0
+#["docker/compose"]
+#    asset_filters = [ "linux" ]
+#    #target = "~/.local/bin/"
 
 # Pretty fast disk usage analyzer written in Go. Replacement for ncdu.
 # License: MIT
