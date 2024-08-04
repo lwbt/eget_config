@@ -27,6 +27,11 @@
     asset_filters = [ "static", ".tar.gz" ]
     #target = "~/.local/bin/eget"
 
+# Mise -- dev tools, env vars, task runner (asdf)
+# License: MIT
+["jdx/mise"]
+    asset_filters = [ "x64.tar.gz" ]
+
 # A vault for securely storing and accessing AWS credentials in development environments
 # License: MIT
 ["99designs/aws-vault"]
