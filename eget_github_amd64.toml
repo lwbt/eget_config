@@ -172,13 +172,6 @@
     # It will otherwise extract as `sh`
     target = "~/.local/bin/shfmt"
 
-# Declaratively manage your cloud infrastructure
-# License: MPL 2.0
-["opentofu/opentofu"]
-    asset_filters = [ ".zip", "^.gpgsig", "^.pem", "^.sig" ]
-    file = "tofu"
-    #target = "~/.local/bin/tofu"
-
 # rsync for cloud storage
 # License: MIT
 ["rclone/rclone"]
