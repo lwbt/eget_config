@@ -172,6 +172,13 @@
     # It will otherwise extract as `sh`
     target = "~/.local/bin/shfmt"
 
+# TUI for configuring Tailscale
+# License: MIT
+# cspell:ignore neuralinkcorp tsui Tailscale
+["neuralinkcorp/tsui"]
+    #asset_filters = [ "static", ".tar.gz" ]
+    target = "~/.local/bin/tsui"
+
 # rsync for cloud storage
 # License: MIT
 ["rclone/rclone"]
