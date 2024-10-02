@@ -1,4 +1,4 @@
-# cspell:ignore github linux kube sbom dundee mozilla rclone atuin atuinsh ivaaaan
+# cspell:ignore github linux kube sbom dundee mozilla rclone atuin atuinsh ivaaaan kubecolor
 [global]
 # RATE LIMITING
 #
@@ -153,6 +153,10 @@
 # License: GPL 3.0
 ["koalaman/shellcheck"]
     #target = "~/.local/bin/shellcheck"
+
+# Colorize your kubectl output
+# License: MIT
+["kubecolor/kubecolor"]
 
 # Bug tracker embedded in git
 # License: GPL 3.0
