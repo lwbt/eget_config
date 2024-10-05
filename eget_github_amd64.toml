@@ -40,14 +40,13 @@
 
 # Faster way to switch between clusters and namespaces in kubectl
 # License: Apache-2.0
-["ahmetb/kubectx"]
-    asset_filters = [ "kubectx", "linux", ".tar.gz" ]
-    #asset_filters = [ "linux", ".tar.gz" ]
-    #all = true
-    #file = "kube*"
-    file = "kubectx"
-    #target = "~/.local/bin/"
-# TODO
+#["ahmetb/kubectx"]
+#    asset_filters = [ "kubectx", "linux", ".tar.gz" ]
+#    #asset_filters = [ "linux", ".tar.gz" ]
+#    #all = true
+#    #file = "kube*"
+#    file = "kubectx"
+#    #target = "~/.local/bin/"
 #["ahmetb/kubectx"]
 #    asset_filters = [ "kubens", "linux", ".tar.gz" ]
 #    file = "kubens"
