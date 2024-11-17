@@ -1,4 +1,4 @@
-# cspell:ignore github linux kube sbom dundee mozilla rclone atuin atuinsh ivaaaan kubecolor
+# cspell:ignore github linux kube sbom dundee mozilla rclone atuin atuinsh ivaaaan kubecolor lazygit jesseduffield
 [global]
 # RATE LIMITING
 #
@@ -24,7 +24,7 @@
 # Eget itself
 # License: MIT
 ["zyedidia/eget"]
-    asset_filters = [ "static", ".tar.gz" ]
+    asset_filters = [ ".tar.gz" ]
     #target = "~/.local/bin/eget"
 
 # Mise -- dev tools, env vars, task runner (asdf)
@@ -136,6 +136,17 @@
 ["jesec/rtorrent"]
     asset_filters = [ "^.deb" ]
     #target = "~/.local/bin/rtorrent"
+
+# Simple terminal UI for git commands
+# License: MIT
+["jesseduffield/lazygit"]
+    asset_filters = [ ".tar.gz" ]
+
+# Convert HTML to Markdown. Even works with entire websites and can be extended through rules.
+# License: MIT
+["JohannesKaufmann/html-to-markdown"]
+    asset_filters = [ "x86_64.tar.gz" ]
+    file = "html2markdown"
 
 # Lightweight and flexible command-line JSON processor
 # License: MIT
