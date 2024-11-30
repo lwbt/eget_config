@@ -25,7 +25,6 @@
 # License: MIT
 ["zyedidia/eget"]
     asset_filters = [ ".tar.gz" ]
-    #target = "~/.local/bin/eget"
 
 # Mise -- dev tools, env vars, task runner (asdf)
 # License: MIT
@@ -36,29 +35,10 @@
 # License: MIT
 ["99designs/aws-vault"]
     asset_filters = [ "linux" ]
-    #target = "~/.local/bin/"
-
-# Faster way to switch between clusters and namespaces in kubectl
-# License: Apache-2.0
-#["ahmetb/kubectx"]
-#    asset_filters = [ "kubectx", "linux", ".tar.gz" ]
-#    #asset_filters = [ "linux", ".tar.gz" ]
-#    #all = true
-#    #file = "kube*"
-#    file = "kubectx"
-#    #target = "~/.local/bin/"
-#["ahmetb/kubectx"]
-#    asset_filters = [ "kubens", "linux", ".tar.gz" ]
-#    file = "kubens"
-#    target = "~/.local/bin/"
 
 # Alternative to top with more functionality and graphs
 # License: Apache 2.0
 ["aristocratos/btop"]
-    #all = true
-    #file = "btop/*"
-    #target = "~/.local/bin/btop.d"
-    #target = "~/.local/bin/btop"
 
 # Magical shell history
 # License: MIT
@@ -66,27 +46,15 @@
 ["atuinsh/atuin"]
     asset_filters = [ "linux-gnu", ".tar.gz" ]
 
-# A fully-modern text-based browser, rendering to TTY and browsers
-# License: LGPL 2.1
-# TODO: Does not work with snap or flatpak?
-["browsh-org/browsh"]
-    asset_filters = [ "^.deb", "^.rpm" ]
-    #target = "~/.local/bin/browsh"
-
 # Tool to improve usability of shell scripts
 # License: MIT
 ["charmbracelet/gum"]
-    #all = true
-    #file = "*"
     asset_filters = [ ".tar.gz", "^.tar.gz.sbom" ]
-    #target = "~/.local/bin/gum.d"
-    #target = "~/.local/bin/gum"
 
 # Edit Asciinema recordings
 # License: MIT
 ["cirocosta/asciinema-edit"]
     asset_filters = [ "linux_amd64.tar.gz" ]
-    #target = "~/.local/bin/asciinema-edit"
 
 # GitHub’s official command line tool -- https://cli.github.com/
 # License: MIT
@@ -98,14 +66,6 @@
 # License: Apache 2.0
 ["derailed/k9s"]
     asset_filters = [ ".tar.gz", "^.sbom" ]
-    #target = "~/.local/bin/k9s"
-
-# NOTE: Considered to be obsolete, included in distribution of docker itself
-## Define and run multi-container applications with Docker
-## License: Apache-2.0
-#["docker/compose"]
-#    asset_filters = [ "linux" ]
-#    #target = "~/.local/bin/"
 
 # Pretty fast disk usage analyzer written in Go. Replacement for ncdu.
 # License: MIT
@@ -128,14 +88,12 @@
 # License: GPL 3.0
 ["jesec/flood"]
     asset_filters = [ "^.deb" ]
-    #target = "~/.local/bin/flood"
 
 # Low resource consumption BitTorrent client
 # License: GPL 2.0
 # TODO: implement the provided unit file from the repo
 ["jesec/rtorrent"]
     asset_filters = [ "^.deb" ]
-    #target = "~/.local/bin/rtorrent"
 
 # Simple terminal UI for git commands
 # License: MIT
@@ -152,17 +110,14 @@
 # License: MIT
 ["jqlang/jq"]
     asset_filters = [ "^linux64" ]
-    #target = "~/.local/bin/jq"
 
 # A command-line fuzzy finder
 # License: MIT
 ["junegunn/fzf"]
-    #target = "~/.local/bin/fzf"
 
 # A static analysis tool for shell scripts
 # License: GPL 3.0
 ["koalaman/shellcheck"]
-    #target = "~/.local/bin/shellcheck"
 
 # Colorize your kubectl output
 # License: MIT
@@ -171,13 +126,11 @@
 # Bug tracker embedded in git
 # License: GPL 3.0
 ["MichaelMure/git-bug"]
-    #target = "~/.local/bin/git-bug"
 
 # WebDriver for Firefox (for browser automation like Selenium)
 # License: MPL 2.0
 ["mozilla/geckodriver"]
     asset_filters = [ ".tar.gz", "^.tar.gz.asc" ]
-    #target = "~/.local/bin/geckodriver"
 
 # A shell parser, formatter, and interpreter with bash support
 # License: BSD-3-Clause license
@@ -190,7 +143,6 @@
 # License: MIT
 # cspell:ignore neuralinkcorp tsui Tailscale
 ["neuralinkcorp/tsui"]
-    #asset_filters = [ "static", ".tar.gz" ]
     target = "~/.local/bin/tsui"
 
 # rsync for cloud storage
@@ -207,35 +159,29 @@
 # Open Source Continuous File Synchronization
 # License: MPL 2.0
 ["syncthing/syncthing"]
-    #target = "~/.local/bin/syncthing"
 
 # D2 is a modern diagram scripting language that turns text to diagrams.
 # License: MPL-2.0
 ["terrastruct/d2"]
     asset_filters = [ "linux", ".tar.gz" ]
     file = "d2"
-    #target = "~/.local/bin/d2"
 
 # Share your terminal over the web
 # License: MIT
 ["tsl0922/ttyd"]
     asset_filters = [ "i686" ]
-    #target = "~/.local/bin/ttyd"
 
 # Manage your dotfiles across multiple diverse machines, securely
 # License: MIT
 ["twpayne/chezmoi"]
     asset_filters = [ ".tar.gz", "^musl", "^glibc" ]
-    #target = "~/.local/bin/chezmoi"
 
 # A structural diff that understands syntax
 # License: MIT
 ["Wilfred/difftastic"]
     asset_filters = [ "gnu.tar.gz" ]
-    #target = "~/.local/bin/difft"
 
-# Git TUI
+# Terminal Workspace
 # License: MIT
 ["zellij-org/zellij"]
     asset_filters = [ "musl.tar.gz" ]
-    #target = "~/.local/bin/zellij"
