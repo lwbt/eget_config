@@ -22,7 +22,13 @@
 
 # FFmpeg
 # License: LGPL or GPL, https://ffmpeg.org/legal.html
-["https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"]
+#["https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"]
+#    all = true
+#    file = "*"
+#    target = "~/.local/ffmpeg.d"
+
+["BtbN/FFmpeg-Builds"]
+    asset_filters = [ "linux64-gpl.tar.xz" ]
     all = true
     file = "*"
     target = "~/.local/ffmpeg.d"
