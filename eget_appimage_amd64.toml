@@ -1,3 +1,4 @@
+# cspell:ignore github Syllo nvtop
 [global]
 # RATE LIMITING
 #
@@ -26,6 +27,12 @@
 ["AppImageCommunity/AppImageUpdate"]
     asset_filters = [ "appimageupdatetool", "x86_64", "^.zsync" ]
     target = "~/Applications/appimageupdatetool.AppImage"
+
+# GPU & Accelerator process monitoring for AMD, Apple, Huawei, Intel, NVIDIA and Qualcomm
+# License: Unknown, GPL-3.0 licenses found
+["Syllo/nvtop"]
+    asset_filters = [ "nvtop", "x86_64", "^.zsync" ]
+    target = "~/Applications/nvtop.AppImage"
 
 # A GPU-accelerated cross-platform terminal emulator and multiplexer
 # License: MIT + OFL 1.1
