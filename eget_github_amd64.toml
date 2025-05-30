@@ -56,16 +56,16 @@
 ["cirocosta/asciinema-edit"]
     asset_filters = [ "linux_amd64.tar.gz" ]
 
-# GitHub’s official command line tool -- https://cli.github.com/
-# License: MIT
-["cli/cli"]
-    asset_filters = [ "linux", ".tar.gz" ]
-    file = "gh"
+## GitHub’s official command line tool -- https://cli.github.com/
+## License: MIT
+#["cli/cli"]
+#    asset_filters = [ "linux", ".tar.gz" ]
+#    file = "gh"
 
-# CLI to view and manage your Kubernetes clusters
-# License: Apache 2.0
-["derailed/k9s"]
-    asset_filters = [ ".tar.gz", "^.sbom" ]
+## CLI to view and manage your Kubernetes clusters
+## License: Apache 2.0
+#["derailed/k9s"]
+#    asset_filters = [ ".tar.gz", "^.sbom" ]
 
 # Pretty fast disk usage analyzer written in Go. Replacement for ncdu.
 # License: MIT
@@ -79,10 +79,10 @@
 ["github/git-sizer"]
     #target = "~/.local/bin/git-sizer"
 
-# Session manager and task runner for tmux. Start your development environment within one command.
-# License: MIT
-["ivaaaan/smug"]
-    asset_filters = [ "Linux", ".tar.gz" ]
+## Session manager and task runner for tmux. Start your development environment within one command.
+## License: MIT
+#["ivaaaan/smug"]
+#    asset_filters = [ "Linux", ".tar.gz" ]
 
 # A modern web UI for various torrent clients with a Node.js backend and React frontend.
 # License: GPL 3.0
@@ -95,10 +95,10 @@
 ["jesec/rtorrent"]
     asset_filters = [ "^.deb" ]
 
-# Simple terminal UI for git commands
-# License: MIT
-["jesseduffield/lazygit"]
-    asset_filters = [ ".tar.gz" ]
+## Simple terminal UI for git commands
+## License: MIT
+#["jesseduffield/lazygit"]
+#    asset_filters = [ ".tar.gz" ]
 
 # Convert HTML to Markdown. Even works with entire websites and can be extended through rules.
 # License: MIT
@@ -115,13 +115,13 @@
 # License: MIT
 ["junegunn/fzf"]
 
-# A static analysis tool for shell scripts
-# License: GPL 3.0
-["koalaman/shellcheck"]
+## A static analysis tool for shell scripts
+## License: GPL 3.0
+#["koalaman/shellcheck"]
 
-# Colorize your kubectl output
-# License: MIT
-["kubecolor/kubecolor"]
+## Colorize your kubectl output
+## License: MIT
+#["kubecolor/kubecolor"]
 
 # Bug tracker embedded in git
 # License: GPL 3.0
@@ -132,12 +132,12 @@
 ["mozilla/geckodriver"]
     asset_filters = [ ".tar.gz", "^.tar.gz.asc" ]
 
-# A shell parser, formatter, and interpreter with bash support
-# License: BSD-3-Clause license
-["mvdan/sh"]
-    asset_filters = [ "linux" ]
-    # It will otherwise extract as `sh`
-    target = "~/.local/bin/shfmt"
+## A shell parser, formatter, and interpreter with bash support
+## License: BSD-3-Clause license
+#["mvdan/sh"]
+#    asset_filters = [ "linux" ]
+#    # It will otherwise extract as `sh`
+#    target = "~/.local/bin/shfmt"
 
 # TUI for configuring Tailscale
 # License: MIT
@@ -145,10 +145,10 @@
 ["neuralinkcorp/tsui"]
     target = "~/.local/bin/tsui"
 
-# rsync for cloud storage
-# License: MIT
-["rclone/rclone"]
-    asset_filters = [ "linux", ".zip" ]
+## rsync for cloud storage
+## License: MIT
+#["rclone/rclone"]
+#    asset_filters = [ "linux", ".zip" ]
 
 # Minimal, blazing-fast, and infinitely customizable prompt for any shell
 # License: ISC https://en.wikipedia.org/wiki/ISC_license
@@ -176,10 +176,10 @@
 ["twpayne/chezmoi"]
     asset_filters = [ ".tar.gz", "^musl", "^glibc" ]
 
-# A structural diff that understands syntax
-# License: MIT
-["Wilfred/difftastic"]
-    asset_filters = [ "gnu.tar.gz" ]
+## A structural diff that understands syntax
+## License: MIT
+#["Wilfred/difftastic"]
+#    asset_filters = [ "gnu.tar.gz" ]
 
 # Terminal Workspace
 # License: MIT
