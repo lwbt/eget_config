@@ -26,35 +26,38 @@
 ["zyedidia/eget"]
     asset_filters = [ ".tar.gz" ]
 
-# Mise -- dev tools, env vars, task runner (asdf)
-# License: MIT
-["jdx/mise"]
-    asset_filters = [ "x64.tar.gz" ]
+# NOTE: Mise can update itself and I can include a run once script in Chezmoi.
+## Mise -- dev tools, env vars, task runner (asdf)
+## License: MIT
+#["jdx/mise"]
+#    asset_filters = [ "x64.tar.gz" ]
 
-# A vault for securely storing and accessing AWS credentials in development environments
-# License: MIT
-["99designs/aws-vault"]
-    asset_filters = [ "linux" ]
+## A vault for securely storing and accessing AWS credentials in development environments
+## License: MIT
+#["99designs/aws-vault"]
+#    asset_filters = [ "linux" ]
 
-# Alternative to top with more functionality and graphs
-# License: Apache 2.0
-["aristocratos/btop"]
+# NOTE: It is included on Debian and on Steamdeck.
+#       I can use mise to fetch the latest version with the above as fallback.
+## Alternative to top with more functionality and graphs
+## License: Apache 2.0
+#["aristocratos/btop"]
 
-# Magical shell history
-# License: MIT
-# Needs/Run with: eval "$(atuin init bash)"
-["atuinsh/atuin"]
-    asset_filters = [ "linux-gnu", ".tar.gz" ]
+## Magical shell history
+## License: MIT
+## Needs/Run with: eval "$(atuin init bash)"
+#["atuinsh/atuin"]
+#    asset_filters = [ "linux-gnu", ".tar.gz" ]
 
-# Tool to improve usability of shell scripts
-# License: MIT
-["charmbracelet/gum"]
-    asset_filters = [ ".tar.gz", "^.tar.gz.sbom" ]
+## Tool to improve usability of shell scripts
+## License: MIT
+#["charmbracelet/gum"]
+#    asset_filters = [ ".tar.gz", "^.tar.gz.sbom" ]
 
-# Edit Asciinema recordings
-# License: MIT
-["cirocosta/asciinema-edit"]
-    asset_filters = [ "linux_amd64.tar.gz" ]
+## Edit Asciinema recordings
+## License: MIT
+#["cirocosta/asciinema-edit"]
+#    asset_filters = [ "linux_amd64.tar.gz" ]
 
 ## GitHub’s official command line tool -- https://cli.github.com/
 ## License: MIT
@@ -67,53 +70,53 @@
 #["derailed/k9s"]
 #    asset_filters = [ ".tar.gz", "^.sbom" ]
 
-# Pretty fast disk usage analyzer written in Go. Replacement for ncdu.
-# License: MIT
-["dundee/gdu"]
-    asset_filters = [ "static" ]
-    # It will otherwise extract as 'gdu_linux_amd64_static'
-    target = "~/.local/bin/gdu"
+## Pretty fast disk usage analyzer written in Go. Replacement for ncdu.
+## License: MIT
+#["dundee/gdu"]
+#    asset_filters = [ "static" ]
+#    # It will otherwise extract as 'gdu_linux_amd64_static'
+#    target = "~/.local/bin/gdu"
 
-# Analyze git repositories
-# License: MIT
-["github/git-sizer"]
-    #target = "~/.local/bin/git-sizer"
+## Analyze git repositories
+## License: MIT
+#["github/git-sizer"]
+#    #target = "~/.local/bin/git-sizer"
 
 ## Session manager and task runner for tmux. Start your development environment within one command.
 ## License: MIT
 #["ivaaaan/smug"]
 #    asset_filters = [ "Linux", ".tar.gz" ]
 
-# A modern web UI for various torrent clients with a Node.js backend and React frontend.
-# License: GPL 3.0
-["jesec/flood"]
-    asset_filters = [ "^.deb" ]
-
-# Low resource consumption BitTorrent client
-# License: GPL 2.0
-# TODO: implement the provided unit file from the repo
-["jesec/rtorrent"]
-    asset_filters = [ "^.deb" ]
+## A modern web UI for various torrent clients with a Node.js backend and React frontend.
+## License: GPL 3.0
+#["jesec/flood"]
+#    asset_filters = [ "^.deb" ]
+#
+## Low resource consumption BitTorrent client
+## License: GPL 2.0
+## TODO: implement the provided unit file from the repo
+#["jesec/rtorrent"]
+#    asset_filters = [ "^.deb" ]
 
 ## Simple terminal UI for git commands
 ## License: MIT
 #["jesseduffield/lazygit"]
 #    asset_filters = [ ".tar.gz" ]
 
-# Convert HTML to Markdown. Even works with entire websites and can be extended through rules.
-# License: MIT
-["JohannesKaufmann/html-to-markdown"]
-    asset_filters = [ "x86_64.tar.gz" ]
-    file = "html2markdown"
+## Convert HTML to Markdown. Even works with entire websites and can be extended through rules.
+## License: MIT
+#["JohannesKaufmann/html-to-markdown"]
+#    asset_filters = [ "x86_64.tar.gz" ]
+#    file = "html2markdown"
 
-# Lightweight and flexible command-line JSON processor
-# License: MIT
-["jqlang/jq"]
-    asset_filters = [ "^linux64" ]
+## Lightweight and flexible command-line JSON processor
+## License: MIT
+#["jqlang/jq"]
+#    asset_filters = [ "^linux64" ]
 
-# A command-line fuzzy finder
-# License: MIT
-["junegunn/fzf"]
+## A command-line fuzzy finder
+## License: MIT
+#["junegunn/fzf"]
 
 ## A static analysis tool for shell scripts
 ## License: GPL 3.0
@@ -123,14 +126,14 @@
 ## License: MIT
 #["kubecolor/kubecolor"]
 
-# Bug tracker embedded in git
-# License: GPL 3.0
-["MichaelMure/git-bug"]
+## Bug tracker embedded in git
+## License: GPL 3.0
+#["MichaelMure/git-bug"]
 
-# WebDriver for Firefox (for browser automation like Selenium)
-# License: MPL 2.0
-["mozilla/geckodriver"]
-    asset_filters = [ ".tar.gz", "^.tar.gz.asc" ]
+## WebDriver for Firefox (for browser automation like Selenium)
+## License: MPL 2.0
+#["mozilla/geckodriver"]
+#    asset_filters = [ ".tar.gz", "^.tar.gz.asc" ]
 
 ## A shell parser, formatter, and interpreter with bash support
 ## License: BSD-3-Clause license
@@ -139,49 +142,49 @@
 #    # It will otherwise extract as `sh`
 #    target = "~/.local/bin/shfmt"
 
-# TUI for configuring Tailscale
-# License: MIT
-# cspell:ignore neuralinkcorp tsui Tailscale
-["neuralinkcorp/tsui"]
-    target = "~/.local/bin/tsui"
+## TUI for configuring Tailscale
+## License: MIT
+## cspell:ignore neuralinkcorp tsui Tailscale
+#["neuralinkcorp/tsui"]
+#    target = "~/.local/bin/tsui"
 
 ## rsync for cloud storage
 ## License: MIT
 #["rclone/rclone"]
 #    asset_filters = [ "linux", ".zip" ]
 
-# Minimal, blazing-fast, and infinitely customizable prompt for any shell
-# License: ISC https://en.wikipedia.org/wiki/ISC_license
-# Needs/Run with: eval "$(starship init bash)"
-["starship/starship"]
-    asset_filters = [ "linux", ".tar.gz", "gnu", "^.sha256" ]
+## Minimal, blazing-fast, and infinitely customizable prompt for any shell
+## License: ISC https://en.wikipedia.org/wiki/ISC_license
+## Needs/Run with: eval "$(starship init bash)"
+#["starship/starship"]
+#    asset_filters = [ "linux", ".tar.gz", "gnu", "^.sha256" ]
 
-# Open Source Continuous File Synchronization
-# License: MPL 2.0
-["syncthing/syncthing"]
+## Open Source Continuous File Synchronization
+## License: MPL 2.0
+#["syncthing/syncthing"]
 
-# D2 is a modern diagram scripting language that turns text to diagrams.
-# License: MPL-2.0
-["terrastruct/d2"]
-    asset_filters = [ "linux", ".tar.gz" ]
-    file = "d2"
+## D2 is a modern diagram scripting language that turns text to diagrams.
+## License: MPL-2.0
+#["terrastruct/d2"]
+#    asset_filters = [ "linux", ".tar.gz" ]
+#    file = "d2"
 
-# Share your terminal over the web
-# License: MIT
-["tsl0922/ttyd"]
-    asset_filters = [ "i686" ]
+## Share your terminal over the web
+## License: MIT
+#["tsl0922/ttyd"]
+#    asset_filters = [ "i686" ]
 
-# Manage your dotfiles across multiple diverse machines, securely
-# License: MIT
-["twpayne/chezmoi"]
-    asset_filters = [ ".tar.gz", "^musl", "^glibc" ]
+## Manage your dotfiles across multiple diverse machines, securely
+## License: MIT
+#["twpayne/chezmoi"]
+#    asset_filters = [ ".tar.gz", "^musl", "^glibc" ]
 
 ## A structural diff that understands syntax
 ## License: MIT
 #["Wilfred/difftastic"]
 #    asset_filters = [ "gnu.tar.gz" ]
 
-# Terminal Workspace
-# License: MIT
-["zellij-org/zellij"]
-    asset_filters = [ "musl.tar.gz" ]
+## Terminal Workspace
+## License: MIT
+#["zellij-org/zellij"]
+#    asset_filters = [ "musl.tar.gz" ]
