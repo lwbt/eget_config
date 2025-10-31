@@ -87,16 +87,16 @@
 #["ivaaaan/smug"]
 #    asset_filters = [ "Linux", ".tar.gz" ]
 
-## A modern web UI for various torrent clients with a Node.js backend and React frontend.
-## License: GPL 3.0
-#["jesec/flood"]
-#    asset_filters = [ "^.deb" ]
-#
-## Low resource consumption BitTorrent client
-## License: GPL 2.0
-## TODO: implement the provided unit file from the repo
-#["jesec/rtorrent"]
-#    asset_filters = [ "^.deb" ]
+# A modern web UI for various torrent clients with a Node.js backend and React frontend.
+# License: GPL 3.0
+["jesec/flood"]
+    asset_filters = [ "^.deb" ]
+
+# Low resource consumption BitTorrent client
+# License: GPL 2.0
+# TODO: implement the provided unit file from the repo
+["jesec/rtorrent"]
+    asset_filters = [ "^.deb" ]
 
 ## Simple terminal UI for git commands
 ## License: MIT
@@ -153,15 +153,15 @@
 #["rclone/rclone"]
 #    asset_filters = [ "linux", ".zip" ]
 
-## Minimal, blazing-fast, and infinitely customizable prompt for any shell
-## License: ISC https://en.wikipedia.org/wiki/ISC_license
-## Needs/Run with: eval "$(starship init bash)"
-#["starship/starship"]
-#    asset_filters = [ "linux", ".tar.gz", "gnu", "^.sha256" ]
+# Minimal, blazing-fast, and infinitely customizable prompt for any shell
+# License: ISC https://en.wikipedia.org/wiki/ISC_license
+# Needs/Run with: eval "$(starship init bash)"
+["starship/starship"]
+    asset_filters = [ "linux", ".tar.gz", "gnu", "^.sha256" ]
 
-## Open Source Continuous File Synchronization
-## License: MPL 2.0
-#["syncthing/syncthing"]
+# Open Source Continuous File Synchronization
+# License: MPL 2.0
+["syncthing/syncthing"]
 
 ## D2 is a modern diagram scripting language that turns text to diagrams.
 ## License: MPL-2.0
