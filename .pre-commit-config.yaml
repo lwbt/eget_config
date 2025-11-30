@@ -3,7 +3,7 @@
 # cspell:ignore autofix shellcheck shfmt yamlfmt gitleaks unattend scrollback
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -24,33 +24,33 @@ repos:
       - id: pretty-format-json
         args: ["--autofix"]
   - repo: https://github.com/google/yamlfmt
-    rev: v0.11.0
+    rev: v0.20.0
     hooks:
       - id: yamlfmt
   - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.9.0
+    rev: v0.11.0
     hooks:
       - id: shellcheck
         args: ["--color=always", "--external-sources"]
         types: ["executable", "file", "shell", "text"]
   - repo: https://github.com/scop/pre-commit-shfmt
-    rev: v3.8.0-1
+    rev: v3.12.0-2
     hooks:
       - id: shfmt
         args: ["--diff", "--indent", "2", "--binary-next-line", "--space-redirects", "--case-indent"]
         types: ["executable", "file", "shell", "text"]
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.2
+    rev: v8.30.0
     hooks:
       - id: gitleaks
         args: ["--no-banner"]
   - repo: https://github.com/amperser/proselint
-    rev: 0.13.0
+    rev: v0.16.0
     hooks:
       - id: proselint
         types: ["asciidoc", "file", "non-executable", "plain-text", "text"]
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.4.0
+    rev: v9.3.3
     hooks:
       - id: cspell
         additional_dependencies:
